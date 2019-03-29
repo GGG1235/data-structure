@@ -1,16 +1,16 @@
 package main
 
 import (
-	"data-structure/sort"
+	"data-structure/graph"
 	"fmt"
 )
 
 func main()  {
-	var a=[]int{32,432,12,31,54,0,3,12,54,12,2}
-	sort.QuickSort(a,0,len(a)-1)
-	for i,e := range a {
-		fmt.Println(i,e)
-	}
+	//var a=[]int{32,432,12,31,54,0,3,12,54,12,2}
+	//sort.QuickSort(a,0,len(a)-1)
+	//for i,e := range a {
+	//	fmt.Println(i,e)
+	//}
 	//sort.BubbleSort(a,0,len(a)-1)
 	//for i,e := range a {
 	//	fmt.Println(i,e)
@@ -19,6 +19,14 @@ func main()  {
 	//for i,e := range a {
 	//	fmt.Println(i,e)
 	//}
+	graph.CreateGraph()
+	graph.PrintGraph()
+	graph.BFS(1)
+	if graph.Check() {
+		fmt.Println("Yes")
+	}else {
+		fmt.Println("No")
+	}
 }
 
 //func main(){
