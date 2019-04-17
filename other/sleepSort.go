@@ -1,14 +1,11 @@
-package main
+package other
 
+/*
+ * 睡眠排序,
+ */
 import (
-	"fmt"
 	"time"
 )
-
-func main() {
-	arr := SleepSort([]int{1,3,1,42,32,12})
-	fmt.Println(arr)
-}
 
 func SleepSort(arr []int) (res []int) {
 	var Channel = make(chan int)
